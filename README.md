@@ -9,6 +9,7 @@ This program is written in Go. You can run it directly like below or compile it 
 
 ### go run logfilter.go -h
 
+```
 Usage:
   -f string
     	Log file to use. If none is used, read from stdin
@@ -37,20 +38,22 @@ File Format: Firewall Blade
 13: src machine name
 14: snid
 15: dst machine name
+```
 
 ## To Do
 Many things can be done to improve this, such as:
-	* Add more filters to processing and choose them with command line params
-	* Generalize the file format to allow anything to be processed (what if src ip is in position 7 instead of 8 - imagine multiple log files from different log source technologies)
-	* Create more sorters
-	* Create multiple ways of output. The current version prints the whole data structure line by line
-	* Expand the data structure to accommodate random number of values as defined by command line arguments
-	* Ensure IP address name resolution for each processed IP address, cache it for a certain timeout
-  * Remove useless lines, such as empty or beginning with a comment
+
+* Add more filters to processing and choose them with command line params
+* Generalize the file format to allow anything to be processed (what if src ip is in position 7 instead of 8 - imagine multiple log files from different log source technologies)
+* Create more sorters
+* Create multiple ways of output. The current version prints the whole data structure line by line
+* Expand the data structure to accommodate random number of values as defined by command line arguments
+* Ensure IP address name resolution for each processed IP address, cache it for a certain timeout
+* Remove useless lines, such as empty or beginning with a comment
 
 ## Example
 Log file:  
-```
+```bash
 2016-04-06 16:20:39|action=accept|orig=11.22.33.44|inzone=Internal|outzone=Internal|rule=31|rule_name=random rule name|service_id=RPC|10.55.66.220|51223|11.20.30.40|139|proto=tcp|src_machine_name=mymachine@gama.int|snid=xxxxxx|dst_machine_name=hismachine@gama.int
 2016-04-06 18:20:39|action=accept|orig=11.22.33.44|inzone=Internal|outzone=Internal|rule=31|rule_name=random rule name|service_id=MS_135|10.33.44.110|54472|12.13.14.15|135|proto=tcp|src_machine_name=mymachine@gama.int|snid=xxxxx|dst_machine_name=hismachine@gama.int
 ```
