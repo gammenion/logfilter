@@ -61,14 +61,15 @@ Log file:
 Then running:  
 ```
 > go run logfilter.go -f test.log -s \| -o srcip
-[Time: 2016-04-06 16:20:39
-Source IP: 10.109.120.225
-Source Port: 51223
-Destination IP: 11.20.30.40
-Destination Port: 139
- Time: 2016-04-06 18:20:39
-Source IP: 10.109.4.115
+[Time: 2016-04-06 18:20:39
+Source IP: 10.33.44.110
 Source Port: 54472
 Destination IP: 12.13.14.15
 Destination Port: 135
+ Time: 2016-04-06 16:20:39
+Source IP: 10.55.66.220
+Source Port: 51223
+Destination IP: 11.20.30.40
+Destination Port: 139
+]
 ```
